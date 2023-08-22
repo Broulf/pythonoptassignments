@@ -49,19 +49,7 @@
 
 # ================================================================================================================================
 
-class Employee:
-    def __init__(self, emp_id, name, hourly_rate, hours_worked):
-        self.emp_id = emp_id
-        self.name = name
-        self.hourly_rate = hourly_rate
-        self.hours_worked = hours_worked
-
-    def calculate_pay(self):
-        return self.hourly_rate * self.hours_worked
-
-    def __str__(self):
-        return f"Employee ID: {self.emp_id}\nName: {self.name}\nHourly Rate: ${self.hourly_rate:.2f}\nHours Worked: {self.hours_worked}\nPay: ${self.calculate_pay():.2f}"
-
+import module1
 
 def main():
     print("Welcome to the Employee Pay Calculator!")
@@ -75,7 +63,7 @@ def main():
         hourly_rate = float(input("Enter Hourly Rate: $"))
         hours_worked = float(input("Enter Hours Worked: "))
 
-        employee = Employee(emp_id, name, hourly_rate, hours_worked)
+        employee = module1.EMPLOYEE(emp_id, name, hourly_rate, hours_worked)
         employees.append(employee)
 
     print("\n--- Employee Payroll ---")
