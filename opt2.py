@@ -21,15 +21,7 @@
 #Letter Grade: B
 
 # ================================================================================================================================
-
-class FinalGrade:
-    def __init__(self, weekly_grades):
-        self.weekly_grades = weekly_grades
-
-    def calculate_final_grade(self):
-        total_percentage = sum(self.weekly_grades)
-        average_percentage = total_percentage / len(self.weekly_grades)
-        return average_percentage
+import module2
 
 def get_letter_grade(percentage):
     if percentage >= 90:
@@ -52,7 +44,7 @@ def main():
         week_grade = float(input(f"Enter Week {i + 1} Percentage Grade: "))
         weekly_grades.append(week_grade)
 
-    final_grade_calculator = FinalGrade(weekly_grades)
+    final_grade_calculator = module2.FINALGRADE(weekly_grades)
     final_percentage = final_grade_calculator.calculate_final_grade()
 
     letter_grade = get_letter_grade(final_percentage)
